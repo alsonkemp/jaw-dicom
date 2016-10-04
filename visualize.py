@@ -24,7 +24,7 @@ class App:
         if new_plan_id == self.plan_id:
             return
         self.plan_id = new_plan_id
-        self.directory = "data/.../"
+        self.directory = "data/04231972/20121220/2.16.840.114421.80129.9409311810.9440847810/"
         print " Self plan_id", self.plan_id
         self.plan   = dicom.read_file(self.directory + ("%04d" % (447-int(self.plan_id))) + ".dcm")
         self.pixels = struct.unpack("<409600H", self.plan.PixelData)
